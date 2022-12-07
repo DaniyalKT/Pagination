@@ -1,30 +1,36 @@
-<!-- <nav aria-label="...">
-  <ul class="pagination pagination-lg">
-    <li class="page-item" [ngClass]="onActiveClass(i)"
-    *ngFor="let image of images; let i = index">
-      <a class="page-link" href="#">{{i+1}}</a>
-    </li>
-  </ul>
-</nav> -->
+<div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <a class="page-link" href="#" (click)="currentPage=currentPage - images.length + 1"
+          [ngClass]="{disabled: currentPage==0}">First</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#" (click)="currentPage=currentPage-1"
+          [ngClass]="{disabled: currentPage==0}">Previous</a>
+      </li>
+      
+      <ng-container *ngFor="let image of images; let i = index">
+        <li class="page-item" *ngIf="checkWindowsIndex(i)" (click)="currentPage=i" [ngClass]="onActiveClass(i)" >
+        <a class="page-link" href="#">{{i+1}}</a>
+        </li>
+      </ng-container>
 
 
-
-<nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li class="page-item">
-      <a class="page-link" (click)="currentPage=currentPage-1" [ngClass]="{disabled: currentPage==0}">Previous</a>
-    </li>
-    <li class="page-item" (click)="currentPage=i" [ngClass]="onActiveClass(i)" *ngFor="let image of images; let i = index">
-      <a class="page-link" href="#">{{i+1}}</a></li>
-
-    <li class="page-item">
-      <a class="page-link" href="#" (click)="currentPage=currentPage+1" [ngClass]="{disabled: currentPage===images.length-1}" >Next</a>
-    </li>
-  </ul>
-</nav>
+      <li class="page-item">
+        <a class="page-link" href="#" (click)="currentPage=currentPage+1"
+          [ngClass]="{disabled: currentPage===images.length-1}">Next</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#" (click)="currentPage=currentPage + images.length-1"
+          [ngClass]="{disabled: currentPage===images.length-1}">Last</a>
+      </li>
+    </ul>
+  </nav>
 
 
-<div style="margin-left: 40%;">
-  <h3>{{images[currentPage].title}}</h3>
-  <img [src]="images[currentPage].url" alt="" style="max-width: 300px">
+  <div style="margin-left: 40%;">
+    <h3>{{images[currentPage].title}}</h3>
+    <img [src]="images[currentPage].url" [alt]="images[currentPage].title" style="max-width: 300px">
+  </div>
 </div>

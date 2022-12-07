@@ -14,6 +14,10 @@ currentPage: number = 0
      return (index==this.currentPage) ? 'active' : ''
   }
 
+  checkWindowsIndex(index: number){
+    return Math.abs(this.currentPage - index) < 5
+  }
+
 
   images = [
     {
@@ -26,6 +30,46 @@ currentPage: number = 0
     },
     {
       title: 'this is a Sea',
+      url: 'https://www.timeforkids.com/wp-content/uploads/2021/07/turtle1.jpg'
+    },
+    {
+      title: 'this is a Sea0',
+      url: 'https://www.timeforkids.com/wp-content/uploads/2021/07/turtle1.jpg'
+    },
+    {
+      title: 'this is a Sea9',
+      url: 'https://www.timeforkids.com/wp-content/uploads/2021/07/turtle1.jpg'
+    },
+    {
+      title: 'this is a Sea8',
+      url: 'https://www.timeforkids.com/wp-content/uploads/2021/07/turtle1.jpg'
+    },
+    {
+      title: 'this is a Sea7',
+      url: 'https://www.timeforkids.com/wp-content/uploads/2021/07/turtle1.jpg'
+    },
+    {
+      title: 'this is a Sea6',
+      url: 'https://www.timeforkids.com/wp-content/uploads/2021/07/turtle1.jpg'
+    },
+    {
+      title: 'this is a Sea5',
+      url: 'https://www.timeforkids.com/wp-content/uploads/2021/07/turtle1.jpg'
+    },
+    {
+      title: 'this is a Sea4',
+      url: 'https://www.timeforkids.com/wp-content/uploads/2021/07/turtle1.jpg'
+    },
+    {
+      title: 'this is a Sea3',
+      url: 'https://www.timeforkids.com/wp-content/uploads/2021/07/turtle1.jpg'
+    },
+    {
+      title: 'this is a Sea2',
+      url: 'https://www.timeforkids.com/wp-content/uploads/2021/07/turtle1.jpg'
+    },
+    {
+      title: 'this is a Sea1',
       url: 'https://www.timeforkids.com/wp-content/uploads/2021/07/turtle1.jpg'
     }
   ]
