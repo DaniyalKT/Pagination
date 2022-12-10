@@ -34,3 +34,18 @@
     <img [src]="images[currentPage].url" [alt]="images[currentPage].title" style="max-width: 300px">
   </div>
 </div>
+
+  
+<!-- <p *ngIf="currentPage == 0; else template"> not changed</p>
+
+<ng-template #template>
+  <p>page changed</p>
+</ng-template> -->
+
+<h2 appClass [backgroundColor]="'red'">Hellow World</h2>
+
+<div [ngSwitch]="currentPage">
+  <p *ngSwitchCase="0" >this page is zero</p>
+  <p *ngSwitchCase="1">this page is one</p>
+  <p *ngSwitchDefault >this page is default</p>
+</div>

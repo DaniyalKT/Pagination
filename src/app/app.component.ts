@@ -19,6 +19,7 @@ currentPage: number = 0
   }
 
 
+
   images = [
     {
       title: 'this is a Beach',
