@@ -42,7 +42,7 @@
   <p>page changed</p>
 </ng-template> -->
 
-<h2 appClass [backgroundColor]="'red'">Hellow World</h2>
+<h2 appClass [backgroundColor]="'red'" *appTimes="2">Hellow World</h2>
 
 <div [ngSwitch]="currentPage">
   <p *ngSwitchCase="0" >this page is zero</p>
