@@ -7,7 +7,7 @@ export class TimesDirective {
 @Input('appTimes') set render(time: number){
 
   for(let i = 0; i <time; i++){
-    this.vcRef.createEmbeddedView(this.templateRef, {})
+    this.vcRef.createEmbeddedView(this.templateRef, {index: i})
   }
 
 }
